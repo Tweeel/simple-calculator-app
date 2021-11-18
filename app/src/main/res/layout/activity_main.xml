@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,208 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/inputTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/outPuttxt"
+        android:background="#000"
+        android:gravity="bottom|right"
+        android:paddingRight="20dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/outPuttxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons"
+        android:background="#000"
+        android:gravity="right"
+        android:paddingEnd="20dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="90sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            style="@style/layout"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_btn_ac"
+                style="@style/boutton"
+                android:onClick="ac_fun"
+                app:srcCompat="@drawable/btn_ac"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_start_bracket"
+                style="@style/rightboutton"
+                android:onClick="start_bracket_fun"
+                app:srcCompat="@drawable/btn_start_bracket"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_end_bracket"
+                style="@style/rightboutton"
+                android:onClick="end_bracket_fun"
+                app:srcCompat="@drawable/btn_end_bracket"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_divide"
+                style="@style/rightboutton"
+                android:onClick="divide_fun"
+                app:srcCompat="@drawable/btn_divide"
+                tools:ignore="ContentDescription,OnClick,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_btn_7"
+                style="@style/boutton"
+                android:onClick="fun_7"
+                app:srcCompat="@drawable/btn_7"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_8"
+                style="@style/rightboutton"
+                android:onClick="fun_8"
+                app:srcCompat="@drawable/btn_8"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_9"
+                style="@style/rightboutton"
+                android:onClick="fun_9"
+                app:srcCompat="@drawable/btn_9"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_multiplication"
+                style="@style/rightboutton"
+                android:onClick="multiplication_fun"
+                app:srcCompat="@drawable/btn_multiplication"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_btn_4"
+                style="@style/boutton"
+                android:onClick="fun_4"
+                app:srcCompat="@drawable/btn_4"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_5"
+                style="@style/rightboutton"
+                android:onClick="fun_5"
+                app:srcCompat="@drawable/btn_5"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_6"
+                style="@style/rightboutton"
+                android:onClick="fun_6"
+                app:srcCompat="@drawable/btn_6"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_minus"
+                style="@style/rightboutton"
+                android:onClick="minus_fun"
+                app:srcCompat="@drawable/btn_minus"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_btn_1"
+                style="@style/boutton"
+                android:onClick="fun_1"
+                app:srcCompat="@drawable/btn_1"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_2"
+                style="@style/rightboutton"
+                android:onClick="fun_2"
+                app:srcCompat="@drawable/btn_2"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_3"
+                style="@style/rightboutton"
+                android:onClick="fun_3"
+                app:srcCompat="@drawable/btn_3"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_plus"
+                style="@style/rightboutton"
+                android:onClick="plus_fun"
+                app:srcCompat="@drawable/btn_plus"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/boutton"
+                android:onClick="fun_0"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/btn_0"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_0"
+                style="@style/rightboutton"
+                android:onClick="fun_0"
+                app:srcCompat="@drawable/btn_0"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+
+
+            <ImageView
+                android:id="@+id/image_btn_dot"
+                style="@style/rightboutton"
+                android:onClick="dot_fun"
+                app:srcCompat="@drawable/btn_dot"
+                tools:ignore="ContentDescription,OnClick,UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/image_btn_equal"
+                style="@style/rightboutton"
+                android:onClick="equal_fun"
+                app:srcCompat="@drawable/btn_equal"
+                tools:ignore="ContentDescription,UsingOnClickInXml" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
