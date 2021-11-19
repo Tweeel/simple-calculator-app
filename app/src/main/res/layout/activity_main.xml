@@ -180,7 +180,6 @@
 
             <ImageView
                 style="@style/boutton"
-                android:onClick="fun_0"
                 android:visibility="invisible"
                 app:srcCompat="@drawable/btn_0"
                 tools:ignore="ContentDescription,UsingOnClickInXml" />
